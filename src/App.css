@@ -1,0 +1,185 @@
+.app-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 206, 153, 0.2), transparent 28%),
+    radial-gradient(circle at 88% 92%, rgba(76, 175, 173, 0.2), transparent 30%),
+    linear-gradient(135deg, #fffdf6 0%, #f4f9ff 100%);
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #dbe6ef;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.navbar__inner {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.navbar__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid #9ec8df;
+  flex-shrink: 0;
+}
+
+.navbar__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f3552;
+  letter-spacing: 0.04em;
+}
+
+.navbar__sub {
+  font-size: 0.78rem;
+  color: #456176;
+  letter-spacing: 0.05em;
+}
+
+.main-content {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 34px 20px 44px;
+}
+
+.intro {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.intro h1 {
+  margin: 0;
+  font-size: clamp(1.7rem, 4vw, 2.9rem);
+  letter-spacing: 0.04em;
+  color: #132a3b;
+}
+
+.intro p {
+  max-width: 700px;
+  margin: 12px auto 0;
+  color: #456176;
+  font-size: 1.05rem;
+}
+
+.status-message {
+  text-align: center;
+  color: #1f3f58;
+  font-weight: 600;
+}
+
+.status-message--error {
+  color: #a11f1f;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #cfe1ed;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(9, 47, 75, 0.08);
+}
+
+.card__image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.card__content {
+  padding: 14px 16px 18px;
+}
+
+.card__title {
+  margin: 0 0 8px;
+  color: #173548;
+  font-size: 1.15rem;
+}
+
+.card__description {
+  margin: 0;
+  color: #4f6778;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(7, 28, 43, 0.55);
+  z-index: 50;
+}
+
+.popup-modal {
+  width: min(440px, 100%);
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #dbe6ef;
+  box-shadow: 0 20px 45px rgba(7, 28, 43, 0.35);
+  padding: 24px;
+  text-align: center;
+}
+
+.popup-modal__title {
+  margin: 0;
+  color: #13344a;
+  font-size: 1.5rem;
+}
+
+.popup-modal__text {
+  margin: 12px 0 0;
+  color: #425f73;
+  line-height: 1.5;
+}
+
+.popup-modal__button {
+  margin-top: 18px;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: #1d6eaa;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    padding-top: 26px;
+  }
+
+  .card__image {
+    height: 170px;
+  }
+
+  .card__button {
+    width: 100%;
+  }
+}
